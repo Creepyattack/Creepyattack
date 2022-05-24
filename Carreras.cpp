@@ -5,8 +5,6 @@
 #include<string>
 #include"Estructuras.h"
 
-#define BACKSPACE 8
-
 using namespace std;
 
 void carreras(void){
@@ -18,11 +16,11 @@ void carreras(void){
 	
 	cout<<"\n\r REGISTRO DE LAS CARRERAS";
 	
-	carrera = fopen("Carreras.dat","r+");
+	carrera = fopen("Carreras.txt","r+");
 	
 	if(carrera==NULL){
 		
-		carrera = fopen("Carreras.dat","w");
+		carrera = fopen("Carreras.txt","w");
 		cout<<"\n ARCHIVO CREADO INTENTE DE NUEVO";
 		getch();
 		return;

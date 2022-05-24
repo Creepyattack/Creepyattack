@@ -19,7 +19,8 @@ struct tipo_carrera{
 
 struct tipo_cursos{
 	
-	int cod_curso;
+	char carrera_curso[50];
+	char cod_curso[50];
 	char nombre_curso[50];
 	int ciclo;
 };
