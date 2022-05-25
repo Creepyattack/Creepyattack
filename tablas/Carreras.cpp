@@ -190,7 +190,7 @@ void carreras(void){
 			while(!feof(carrera)){
 			    if(strcmp(Carrera.cod_carrera, auxcod)== 0)
 				{
-					cout<<"\nLos Datos del Producto son: ";
+					cout<<"\nLos Datos de la carrera son: ";
 					cout<<"\n-----------------------------------"<<endl;
 					cout<<"\n Clave de la carrera: "<<Carrera.cod_carrera<<endl;
 					cout<<" Nombre de la carrera: "<<Carrera.carrera<<endl;

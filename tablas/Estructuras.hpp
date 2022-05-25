@@ -30,3 +30,10 @@ struct tipo_seccion{
 	char seccion[50];
 	char nombre_seccion[50];
 };
+
+struct tipo_catedraticos{
+	
+	char codigo_catedratico[50];
+	char titulo[50];
+	char nombre[50];
+};

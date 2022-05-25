@@ -9,6 +9,8 @@ using namespace std;
 void secciones(void);
 void carreras(void);
 void cursos(void);
+void catedraticos(void);
+void alumnos(void);
 
 void admin(void){
 	
@@ -48,11 +50,11 @@ void admin(void){
 		break;
 		
 		case 4:
-			
+			catedraticos();
 		break;
 		
 		case 5:
-			
+			alumnos();
 		break;
 		
 		case 6:

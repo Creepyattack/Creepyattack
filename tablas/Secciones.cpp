@@ -209,7 +209,7 @@ void cambiosseccion(void){
 			while(!feof(secciones)){
 			    if(strcmp(Seccion.seccion, aux)==0)
 				{
-						cout<<"\nLos Datos del curso son: ";
+						cout<<"\nLos Datos de la seccion son: ";
 						cout<<"\n-----------------------------------"<<endl;
 						cout<<"\n Seccion del curso: "<<Seccion.seccion<<endl;
 						cout<<" Nombre del curso: "<<Seccion.nombre_seccion<<endl;
