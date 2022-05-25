@@ -230,14 +230,14 @@ void cambisocatedraticos(void){
 								case 1:
 									system("cls");
 									
-									cout<<"\nIngrese el Nuevo Nombre del Producto: ";
+									cout<<"\nIngrese el Nuevo Nombre del Catedratico: ";
 									cin>>Catedraticos.nombre;
 									system("cls");
 								break;
 								
 								case 2:
 									system("cls");
-									cout<<"\nIngrese el Nuevo nombre del producto: ";
+									cout<<"\nIngrese el Nuevo titulo del Catedratico: ";
 									cin>>Catedraticos.titulo;
 									system("cls");
 								break;

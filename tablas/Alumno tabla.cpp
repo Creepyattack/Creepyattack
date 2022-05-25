@@ -7,6 +7,9 @@
 
 using namespace std;
 
+void altasalumnos(void);
+void bajasalumnos(void);
+
 void alumnos(void){
 	
 	int i;
@@ -33,11 +36,11 @@ void alumnos(void){
 	switch(i)
 	{
 		case 1:
-			
+			altasalumnos();
 		break;
 		
 		case 2:	
-			
+			bajasalumnos();
 		break;
 		
 		case 3:
@@ -128,4 +131,158 @@ void altasalumnos(void){
 			fclose(alumno);
 	        fclose(carrera);
 			system("pause>nul");  	
+}
+
+void bajasalumnos(void){
+	
+	FILE *alumno;
+	char auxcod[50],op;
+	
+	struct tipo_alumno Alumno;
+	cout<<"\n\r BAJAS DE LOS ALUMNOS";
+	
+	alumno = fopen("Alumnos.txt", "r+");
+	
+	if(alumno==NULL){
+		cout<<"\n NO EXISTE EL ARCHIVO";
+		fclose(alumno);
+		getch();
+		return;
+	}
+	
+	cout<<"\n Ingrese el carnet del alumno que desea eliminar: ";
+	cin>>auxcod;
+	
+		fread(&Alumno, sizeof(Alumno), 1,alumno);
+	    while(!feof(alumno)){
+	    	
+	    	if(strcmp(Alumno.carnet, auxcod)==0){
+	    		
+	    		cout<<"\n-----------------------------------"<<endl;
+	    		cout<<"\n Carnet del alumno: "<<Alumno.carnet<<endl;
+	    		cout<<" Nombre del alumno: "<<Alumno.nombre_alumno<<endl;
+	    		cout<<" Carrera del alumno: "<<Alumno.alumno_carrera<<endl;
+	    		cout<<"\n-----------------------------------"<<endl;
+	    		
+	    		strcpy(Alumno.carnet, "----");
+	    		strcpy(Alumno.nombre_alumno, "----");
+	    		strcpy(Alumno.alumno_carrera, "----");
+	    		
+	    		do{
+	    		cout<<"\n\nDesea eliminar el Registro? [S/N]: ";
+				cin>>op;	
+				op=toupper(op);
+				}while(op!='S' && op!='N');
+				
+					if(op == 'S')
+				{
+					fseek(alumno, ftell(alumno)-sizeof(Alumno), SEEK_SET);
+					fwrite(&Alumno, sizeof(Alumno), 1,alumno);
+					cout<<"\n REGISTRO ELIMINADO!!!";
+				}		
+				fclose(alumno);
+				getch();
+				return;
+			}
+			fread(&Alumno, sizeof(Alumno), 1,alumno);
+		}
+		cout<<"\nNO SE ENCUENTRA EL REGISTRO";
+		fclose(alumno);
+		getch();
+		return;	
+}
+
+void cambiosalumno(void){
+	
+	
+	FILE *alumno;
+	char auxcod[50];
+	bool rep = true;
+	int op;
+	
+	struct tipo_alumno Alumno;
+	cout<<"\n\r CAMBIOS A LOS REGISTROS DE LOS ALUMNOS";
+	
+	alumno = fopen("Alumnos.txt", "r+");
+	
+	if(alumno==NULL){
+		cout<<"\n NO EXISTE EL ARCHIVO";
+		fclose(alumno);
+		getch();
+		return;
+	}
+	
+		cout<<"\n Ingrese el carnet del alumno que desea modificar: ";
+		cin>>auxcod;
+		
+		fread(&Alumno, sizeof(Alumno), 1,alumno);
+	    while(!feof(alumno)){
+	    	if(strcmp(Alumno.carnet, auxcod)==0){
+	    		
+	    			cout<<"\nLos Datos del alumno son: ";
+					cout<<"\n-----------------------------------"<<endl;
+					cout<<"\n Carnet del alumno: "<<Alumno.carnet<<endl;
+		    		cout<<" Nombre del alumno: "<<Alumno.nombre_alumno<<endl;
+		    		cout<<" Carrera del alumno: "<<Alumno.alumno_carrera<<endl;
+		    		cout<<"\n-----------------------------------"<<endl;
+		    		cout<<"\n\n\n\r";
+			
+					system("pause");
+					system("cls");
+					
+						do{
+				
+							cout<<"\n---------------------------------"<<endl;
+							cout<<"- Que desea cambiar:              -";
+							cout<<"\n---------------------------------"<<endl;
+							cout<<"- Cambiar Nombre: Opcion 1.       -";
+							cout<<"\n---------------------------------"<<endl;
+							cout<<"- Cambiar Carrera: Opcion 2.      -";
+							cout<<"\n---------------------------------"<<endl;
+							cout<<"- Terminar o Cancelar: Opcion 0.  -";
+							cout<<"\n---------------------------------"<<endl;
+							cout<<"\n\n Elija una Opcion: ";
+							cin>>op;
+							
+							switch(op)
+							{
+								case 1:
+									system("cls");
+									
+									cout<<"\nIngrese el Nuevo Nombre del Alumno: ";
+									cin>>Alumno.nombre_alumno;
+									system("cls");
+								break;
+								
+								case 2:
+									system("cls");
+									cout<<"\nIngrese la Nueva carrera del Alumno: ";
+									cin>>Alumno.alumno_carrera;
+									system("cls");
+								break;
+
+								case 0:
+									rep = false;
+								break;
+								
+								default:
+									cout<<"\n Opcion Incorrecta";
+								break;
+							}
+							}while(rep);
+							
+							fseek(alumno, ftell(alumno)-sizeof(Alumno), SEEK_SET);
+							fwrite(&Alumno, sizeof(Alumno), 1,alumno);
+							
+							fclose(alumno);
+							cout<<"\n\n EL REGISTRO HA SIDO MODIFICADO";
+								getch();
+								return;	
+							}
+							fread(&Alumno, sizeof(Alumno), 1,alumno);
+						}
+						cout<<"\nNO SE ENCONTRO EL PRODUCTOS CON ESE CODIGO!!!";
+						fclose(alumno);
+						getch();
+						return;	
 }

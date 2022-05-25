@@ -218,7 +218,7 @@ void carreras(void){
 								case 1:
 									system("cls");
 									
-									cout<<"\nIngrese el Nuevo Nombre del Producto: ";
+									cout<<"\nIngrese el Nuevo Nombre de la carrera: ";
 									cin>>Carrera.carrera;
 									system("cls");
 								break;
