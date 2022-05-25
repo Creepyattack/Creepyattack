@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = tablas/Carreras.o tablas/cursos.o Usuarios/admin.o Usuarios/administradorcontrasena.o Usuarios/alumno.o Usuarios/User.o Usuarios/UserMenu.o Otros/Main.o tablas/Secciones.o tablas/Catedraticos.o "tablas/Alumno\ tabla.o"
-LINKOBJ  = tablas/Carreras.o tablas/cursos.o Usuarios/admin.o Usuarios/administradorcontrasena.o Usuarios/alumno.o Usuarios/User.o Usuarios/UserMenu.o Otros/Main.o tablas/Secciones.o tablas/Catedraticos.o "tablas/Alumno tabla.o"
+OBJ      = tablas/Carreras.o tablas/cursos.o Usuarios/admin.o Usuarios/administradorcontrasena.o Usuarios/alumno.o Usuarios/User.o Usuarios/UserMenu.o Otros/Main.o tablas/Secciones.o tablas/Catedraticos.o "tablas/Alumno\ tabla.o" "tablas/Catedraticos\ por\ cursos.o"
+LINKOBJ  = tablas/Carreras.o tablas/cursos.o Usuarios/admin.o Usuarios/administradorcontrasena.o Usuarios/alumno.o Usuarios/User.o Usuarios/UserMenu.o Otros/Main.o tablas/Secciones.o tablas/Catedraticos.o "tablas/Alumno tabla.o" "tablas/Catedraticos por cursos.o"
 LIBS     = -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib" -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
 CXXINCS  = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
@@ -56,3 +56,6 @@ tablas/Catedraticos.o: tablas/Catedraticos.cpp
 
 "tablas/Alumno\ tabla.o": tablas/Alumno\ tabla.cpp
 	$(CPP) -c "tablas/Alumno tabla.cpp" -o "tablas/Alumno tabla.o" $(CXXFLAGS)
+
+"tablas/Catedraticos\ por\ cursos.o": tablas/Catedraticos\ por\ cursos.cpp
+	$(CPP) -c "tablas/Catedraticos por cursos.cpp" -o "tablas/Catedraticos por cursos.o" $(CXXFLAGS)

@@ -69,7 +69,7 @@ void altassecciones(void){
 	struct tipo_cursos Cursos;
 	char auxcod[10],aux[50],auxnom[50];
 	
-	cout<<"\n\r RESGISTRO DE SECCIONES";
+	cout<<"\n\r REGISTRO DE SECCIONES";
 	
 	secciones = fopen("Secciones.txt","r+");
 	cursos = fopen("Cursos.txt","r+");

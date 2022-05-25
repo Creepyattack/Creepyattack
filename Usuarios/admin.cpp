@@ -6,6 +6,7 @@
 
 using namespace std;
 
+void catedraticos_cursos(void);
 void secciones(void);
 void carreras(void);
 void cursos(void);
@@ -30,7 +31,9 @@ void admin(void){
 	cout<<"\n-----------------------------------------------------"<<endl;
 	cout<<"- Opcion 5: Ingreso Archivo de alumnos               -";
 	cout<<"\n-----------------------------------------------------"<<endl;
-	cout<<"- Opcion 6: Regresar al ingreso de usuario           -";
+	cout<<"- Opcion 6: Ingreso Archivo de catedraticos por curso y seccion-";
+	cout<<"\n-----------------------------------------------------"<<endl;
+	cout<<"- Opcion 7: Regresar al ingreso de usuario           -";
 	cout<<"\n-----------------------------------------------------"<<endl;
 	cout<<"\n\n Elija una Opcion: ";
 	cin>>x;
@@ -58,6 +61,10 @@ void admin(void){
 		break;
 		
 		case 6:
+			catedraticos_cursos();
+		break;
+		
+		case 7:
 			rep=false;
 		break;
 		
