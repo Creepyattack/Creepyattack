@@ -1,18 +1,18 @@
-# Project: Proyecto final
+# Project: N01 Supertech
 # Makefile created by Embarcadero Dev-C++ 6.3
 
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = Main.o alumno.o administradorcontrasena.o User.o admin.o UserMenu.o Carreras.o cursos.o
-LINKOBJ  = Main.o alumno.o administradorcontrasena.o User.o admin.o UserMenu.o Carreras.o cursos.o
+OBJ      = tablas/Carreras.o tablas/cursos.o Usuarios/admin.o Usuarios/administradorcontrasena.o Usuarios/alumno.o Usuarios/User.o Usuarios/UserMenu.o Otros/Main.o tablas/Secciones.o tablas/Catedraticos.o
+LINKOBJ  = tablas/Carreras.o tablas/cursos.o Usuarios/admin.o Usuarios/administradorcontrasena.o Usuarios/alumno.o Usuarios/User.o Usuarios/UserMenu.o Otros/Main.o tablas/Secciones.o tablas/Catedraticos.o
 LIBS     = -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib" -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
 CXXINCS  = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
-BIN      = "Proyecto final.exe"
+BIN      = "No1 Supetech.exe"
 CXXFLAGS = $(CXXINCS) 
 CFLAGS   = $(INCS) 
-DEL      = C:\Program Files (x86)\Embarcadero\Dev-Cpp\devcpp.exe INTERNAL_DEL
+DEL      = C:\Program Files (x86)\Embarcadero\Dev-Cpp\DevCpp.exe INTERNAL_DEL
 
 .PHONY: all all-before all-after clean clean-custom
 
@@ -24,26 +24,32 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-Main.o: Main.cpp
-	$(CPP) -c Main.cpp -o Main.o $(CXXFLAGS)
+tablas/Carreras.o: tablas/Carreras.cpp
+	$(CPP) -c tablas/Carreras.cpp -o tablas/Carreras.o $(CXXFLAGS)
 
-alumno.o: alumno.cpp
-	$(CPP) -c alumno.cpp -o alumno.o $(CXXFLAGS)
+tablas/cursos.o: tablas/cursos.cpp
+	$(CPP) -c tablas/cursos.cpp -o tablas/cursos.o $(CXXFLAGS)
 
-administradorcontrasena.o: administradorcontrasena.cpp
-	$(CPP) -c administradorcontrasena.cpp -o administradorcontrasena.o $(CXXFLAGS)
+Usuarios/admin.o: Usuarios/admin.cpp
+	$(CPP) -c Usuarios/admin.cpp -o Usuarios/admin.o $(CXXFLAGS)
 
-User.o: User.cpp
-	$(CPP) -c User.cpp -o User.o $(CXXFLAGS)
+Usuarios/administradorcontrasena.o: Usuarios/administradorcontrasena.cpp
+	$(CPP) -c Usuarios/administradorcontrasena.cpp -o Usuarios/administradorcontrasena.o $(CXXFLAGS)
 
-admin.o: admin.cpp
-	$(CPP) -c admin.cpp -o admin.o $(CXXFLAGS)
+Usuarios/alumno.o: Usuarios/alumno.cpp
+	$(CPP) -c Usuarios/alumno.cpp -o Usuarios/alumno.o $(CXXFLAGS)
 
-UserMenu.o: UserMenu.cpp
-	$(CPP) -c UserMenu.cpp -o UserMenu.o $(CXXFLAGS)
+Usuarios/User.o: Usuarios/User.cpp
+	$(CPP) -c Usuarios/User.cpp -o Usuarios/User.o $(CXXFLAGS)
 
-Carreras.o: Carreras.cpp
-	$(CPP) -c Carreras.cpp -o Carreras.o $(CXXFLAGS)
+Usuarios/UserMenu.o: Usuarios/UserMenu.cpp
+	$(CPP) -c Usuarios/UserMenu.cpp -o Usuarios/UserMenu.o $(CXXFLAGS)
 
-cursos.o: cursos.cpp
-	$(CPP) -c cursos.cpp -o cursos.o $(CXXFLAGS)
+Otros/Main.o: Otros/Main.cpp
+	$(CPP) -c Otros/Main.cpp -o Otros/Main.o $(CXXFLAGS)
+
+tablas/Secciones.o: tablas/Secciones.cpp
+	$(CPP) -c tablas/Secciones.cpp -o tablas/Secciones.o $(CXXFLAGS)
+
+tablas/Catedraticos.o: tablas/Catedraticos.cpp
+	$(CPP) -c tablas/Catedraticos.cpp -o tablas/Catedraticos.o $(CXXFLAGS)

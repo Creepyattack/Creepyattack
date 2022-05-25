@@ -18,15 +18,15 @@ int main(){
 	do{
 	system("cls");
 	system("color 07");
-	cout<<"\n------Seleccione el tipo de usario-----"<<endl;
+	cout<<"\n------Seleccione el tipo de usario----"<<endl;
 	cout<<"- Opcion 1: Alumno                   - ";
-	cout<<"\n---------------------------------------"<<endl;
+	cout<<"\n--------------------------------------"<<endl;
 	cout<<"- Opcion 2: Administrador            - ";
-	cout<<"\n---------------------------------------"<<endl;
+	cout<<"\n--------------------------------------"<<endl;
 	cout<<"- Opcion 3: Super Usuario            - ";
-	cout<<"\n---------------------------------------"<<endl;
+	cout<<"\n--------------------------------------"<<endl;
 	cout<<"- Opcion 4: Salir                    - ";
-	cout<<"\n-------------------------------------- ";
+	cout<<"\n------------------------------------- ";
 	cout<<"\n\n Elija una Opcion: ";
 	cin>>opcion;
 	

@@ -25,7 +25,8 @@ struct tipo_cursos{
 	int ciclo;
 };
 
-struct secciones{
+struct tipo_seccion{
 	
 	char seccion[50];
+	char nombre_seccion[50];
 };

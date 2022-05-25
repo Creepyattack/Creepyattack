@@ -6,6 +6,7 @@
 
 using namespace std;
 
+void secciones(void);
 void carreras(void);
 void cursos(void);
 
@@ -43,7 +44,7 @@ void admin(void){
 		break;
 		
 		case 3:
-			
+			secciones();
 		break;
 		
 		case 4:
