@@ -243,7 +243,7 @@ void carreras(void){
 							}
 							fread(&Carrera, sizeof(Carrera), 1,carrera);
 						}
-						cout<<"\nNO SE ENCONTRO EL PRODUCTOS CON ESE CODIGO!!!";
+						cout<<"\nNO SE ENCONTRO LA CARRERA CON ESA CLAVE!!!";
 						fclose(carrera);
 						getch();
 						return;		

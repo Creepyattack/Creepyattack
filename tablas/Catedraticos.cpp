@@ -262,7 +262,7 @@ void cambisocatedraticos(void){
 							}
 							fread(&Catedraticos, sizeof(Catedraticos), 1,catedraticos);
 						}
-						cout<<"\nNO SE ENCONTRO EL PRODUCTOS CON ESE CODIGO!!!";
+						cout<<"\nNO SE ENCONTRO EL CATEDRATICO CON ESA CLAVE!!!";
 						fclose(catedraticos);
 						getch();
 						return;		

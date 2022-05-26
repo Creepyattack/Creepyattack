@@ -293,7 +293,7 @@ void cambioscursos(void){
 							}
 							fread(&Cursos, sizeof(Cursos), 1,cursos);
 						}
-						cout<<"\nNO SE ENCONTRO EL PRODUCTOS CON ESE CODIGO!!!";
+						cout<<"\nNO SE ENCONTRO EL CURSO CON ESA CLAVE!!!";
 						fclose(cursos);
 						getch();
 						return;

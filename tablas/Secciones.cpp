@@ -261,9 +261,9 @@ void cambiosseccion(void){
 								getch();
 								return;	
 							}
-							fread(&Seccion, sizeof(Seccion), 1,secciones);;
+							fread(&Seccion, sizeof(Seccion), 1,secciones);
 						}
-						cout<<"\nNO SE ENCONTRO EL PRODUCTOS CON ESE CODIGO!!!";
+						cout<<"\nNO SE ENCONTRO LA SECCION CON ESE CODIGO!!!";
 						fclose(secciones);
 						getch();
 						return;

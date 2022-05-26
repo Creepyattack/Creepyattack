@@ -281,7 +281,7 @@ void cambiosalumno(void){
 							}
 							fread(&Alumno, sizeof(Alumno), 1,alumno);
 						}
-						cout<<"\nNO SE ENCONTRO EL PRODUCTOS CON ESE CODIGO!!!";
+						cout<<"\nNO SE ENCONTRO AL ALUMNO CON ESE CARNET!!!";
 						fclose(alumno);
 						getch();
 						return;	
