@@ -7,6 +7,7 @@
 using namespace std;
 
 void alumno(void);
+void catedraticocontra(void);
 void admincontra(void);
 void User(void);
 
@@ -25,7 +26,9 @@ int main(){
 	cout<<"\n--------------------------------------"<<endl;
 	cout<<"- Opcion 3: Super Usuario            - ";
 	cout<<"\n--------------------------------------"<<endl;
-	cout<<"- Opcion 4: Salir                    - ";
+	cout<<"- Opcion 4: Catedratico              - ";
+	cout<<"\n--------------------------------------"<<endl;
+	cout<<"- Opcion 5: Salir                    - ";
 	cout<<"\n------------------------------------- ";
 	cout<<"\n\n Elija una Opcion: ";
 	cin>>opcion;
@@ -46,6 +49,10 @@ int main(){
 		break;
 		
 		case 4:
+			catedraticocontra();
+		break;
+		
+		case 5:
 			x=false;
 		break;
 		

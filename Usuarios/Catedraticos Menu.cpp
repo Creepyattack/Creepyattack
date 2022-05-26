@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void usermenu(void){
+void catedraticosmenu(void){
 	
 	int x;
 	bool rep=true;
@@ -14,7 +14,7 @@ void usermenu(void){
 	system("cls");
 	system("color 07");
 	cout<<"\n -----------------Menu de Opciones-------------------"<<endl;
-	cout<<"- Opcion 1: Menu de administracion                   -";
+	cout<<"- Opcion 1: Consultar sus propias evaluaciones       -";
 	cout<<"\n-----------------------------------------------------"<<endl;
 	cout<<"- Opcion 2: Regresar al ingreso de usuario           -";
 	cout<<"\n-----------------------------------------------------"<<endl;

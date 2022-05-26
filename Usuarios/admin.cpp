@@ -6,12 +6,8 @@
 
 using namespace std;
 
-void catedraticos_cursos(void);
-void secciones(void);
-void carreras(void);
-void cursos(void);
-void catedraticos(void);
-void alumnos(void);
+void Tablas(void);
+void alumno(void);
 
 void admin(void){
 	
@@ -21,19 +17,13 @@ void admin(void){
 	system("cls");
 	system("color 07");
 	cout<<"\n -----------------Menu de Opciones-------------------"<<endl;
-	cout<<"- Opcion 1: Ingreso Archivo de Carreras              -";
+	cout<<"- Opcion 1: Menu de tablas                           -";
 	cout<<"\n-----------------------------------------------------"<<endl;
-	cout<<"- Opcion 2: Ingreso Archivo de cursos por carreras   -";
+	cout<<"- Opcion 2: Menu de evaluaciones                     -";
 	cout<<"\n-----------------------------------------------------"<<endl;
-	cout<<"- Opcion 3: Ingreso Archivo de cursos por secciones  -";
+	cout<<"- Opcion 3: Menu de administracion                   -";
 	cout<<"\n-----------------------------------------------------"<<endl;
-	cout<<"- Opcion 4: Ingreso Archivo catedraticos             -";
-	cout<<"\n-----------------------------------------------------"<<endl;
-	cout<<"- Opcion 5: Ingreso Archivo de alumnos               -";
-	cout<<"\n-----------------------------------------------------"<<endl;
-	cout<<"- Opcion 6: Ingreso Archivo de catedraticos por curso y seccion-";
-	cout<<"\n-----------------------------------------------------"<<endl;
-	cout<<"- Opcion 7: Regresar al ingreso de usuario           -";
+	cout<<"- Opcion 4: Regresar al ingreso de usuario           -";
 	cout<<"\n-----------------------------------------------------"<<endl;
 	cout<<"\n\n Elija una Opcion: ";
 	cin>>x;
@@ -41,30 +31,18 @@ void admin(void){
 	switch(x){
 		
 		case 1:
-			carreras();
+			Tablas();
 		break;
 		
 		case 2:
-			cursos();
+			alumno();
 		break;
 		
 		case 3:
-			secciones();
-		break;
 		
+		break;
+	
 		case 4:
-			catedraticos();
-		break;
-		
-		case 5:
-			alumnos();
-		break;
-		
-		case 6:
-			catedraticos_cursos();
-		break;
-		
-		case 7:
 			rep=false;
 		break;
 		
