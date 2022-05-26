@@ -29,7 +29,7 @@ IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
 CompilerSettings=0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;12;0;0;0
-UnitCount=16
+UnitCount=18
 
 [VersionInfo]
 Major=1
@@ -204,6 +204,26 @@ BuildCmd=
 FileName=Usuarios\Catedraticos Menu.cpp
 CompileCpp=1
 Folder=Usuarios
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit17]
+FileName=tablas\Evaluacion.cpp
+CompileCpp=1
+Folder=Tablas
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit18]
+FileName=tablas\alumnos por carrera y ciclo.cpp
+CompileCpp=1
+Folder=Tablas
 Compile=1
 Link=1
 Priority=1000

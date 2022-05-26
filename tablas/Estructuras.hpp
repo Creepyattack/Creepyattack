@@ -46,3 +46,11 @@ struct tipo_catedraticos_cursos{
 	char nombre_cat[50];
 	char titulo_cat[50];
 };
+
+struct tipo_alumno_ciclo{
+	
+	char carnet_curso[50];
+	char nombre_alumno_curso[50];
+	char carrera_ciclo[50];
+	char ciclo_alumno[50];
+};

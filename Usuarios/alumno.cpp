@@ -3,9 +3,10 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string>
-#include"Estructuras.h"
 
 using namespace std;
+
+void evaluacion(void);
 
 void alumno(void){
 	
@@ -28,7 +29,7 @@ void alumno(void){
 		switch(x){
 			
 			case 1:
-				
+				evaluacion();
 			break;
 			
 			case 2:
