@@ -70,6 +70,27 @@ struct tipo_evaluacion3{
 	char evaluacion3[50];
 };
 
+struct tipo_evaluacion4{
+	
+	char carnet4[50];
+	char catedratico4[50];
+	char evaluacion4[50];
+};
+
+struct tipo_evaluacion5{
+	
+	char carnet5[50];
+	char catedratico5[50];
+	char evaluacion5[50];
+};
+
+struct tipo_evaluacion6{
+	
+	char carnet6[50];
+	char catedratico6[50];
+	char evaluacion6[50];
+};
+
 struct usuarios{
 	
 	char usuario[50];
