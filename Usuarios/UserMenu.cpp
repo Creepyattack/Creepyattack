@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void usermenu(void){
+void admin(void){
 	
 	int x;
 	bool rep=true;

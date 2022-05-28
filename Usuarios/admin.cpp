@@ -9,7 +9,7 @@ using namespace std;
 void Tablas(void);
 void alumno(void);
 
-void admin(void){
+void usermenu(void){
 	
 	int x;
 	bool rep=true;
