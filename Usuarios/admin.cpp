@@ -23,7 +23,7 @@ void usermenu(void){
 	cout<<"\n-----------------------------------------------------"<<endl;
 	cout<<"- Opcion 3: Menu de administracion                   -";
 	cout<<"\n-----------------------------------------------------"<<endl;
-	cout<<"- Opcion 4: Regresar al ingreso de usuario           -";
+	cout<<"- Opcion 4: Regresar al Menu Principal           -";
 	cout<<"\n-----------------------------------------------------"<<endl;
 	cout<<"\n\n Elija una Opcion: ";
 	cin>>x;

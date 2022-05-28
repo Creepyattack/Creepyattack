@@ -31,10 +31,10 @@ void Password(void){
 	    while(!feof(usuarios)){
 	    	
 	    	if(strcmp(Usuario.usuario, auxnom)==0){
-
+	    		encontra=true;
 	    		if(strcmp(Usuario.contrasena, auxcontra)==0){
-
-	    			cout<<"\n\tTipo de usuario: "<<Usuario.tipo<<endl;
+	    			encontrado=true;
+	    			cout<<"\n\t Tipo de usuario: "<<Usuario.tipo;
 	    			
 	    			if(strcmp(Usuario.tipo, "Administrador")==0){
 	    				cout<<"\n\t BIENVENIDO AL SISTEMA";
@@ -59,8 +59,11 @@ void Password(void){
 	    	}
 	    	fread(&Usuario, sizeof(Usuario), 1,usuarios);
 		}
-		cout<<"\n Usuario o Password Incorrectos!!";
+		
+		if(encontrado==false || encontra==false){
+		cout<<"\n\t Usuario o Password Incorrectos";
 		fclose(usuarios);
 		getch();
 		return;
+	}
 }

@@ -16,7 +16,7 @@ void admin(void){
 	cout<<"\n -----------------Menu de Opciones-------------------"<<endl;
 	cout<<"- Opcion 1: Menu de administracion                   -";
 	cout<<"\n-----------------------------------------------------"<<endl;
-	cout<<"- Opcion 2: Regresar al ingreso de usuario           -";
+	cout<<"- Opcion 2: Regresar al Menu Principal               -";
 	cout<<"\n-----------------------------------------------------"<<endl;
 	cout<<"\n\n Elija una Opcion: ";
 	cin>>x;

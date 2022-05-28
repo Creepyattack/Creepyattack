@@ -8,7 +8,7 @@
 using namespace std;
 
 void evaluacion(void){
-	
+	system("cls");
 	cout<<"\t\t EVALUACION DE ESTUDIATES A DOCENTES";
 	cout<<"\n-------------------------------------------------------------------------------";
 	cout<<"\t\n- Carrera:  ";

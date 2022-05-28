@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void alumno(void);
+void evaluacion(void);
 void Password(void);
 
 int main(){
@@ -31,7 +31,7 @@ int main(){
 	switch(opcion)
 	{
 		case 1:
-			alumno();
+			evaluacion();
 		break;
 		
 		case 2:
