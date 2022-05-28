@@ -91,7 +91,7 @@ void altascursos(void){
 		cout<<"\nIngrese el Codigo de la Carrera: ";
 	    cin>>auxcod;
 	    cout<<"\n-----------------------------------------------------"<<endl;
-	    
+	    strcpy(Cursos.carrera_curso, auxcod);
 	    fread(&Carrera, sizeof(Carrera), 1,carrera);
 	        
 	        while(!feof(carrera)){
@@ -110,8 +110,6 @@ void altascursos(void){
 	        	getch();
 	        	return;
 		}
-		
-		strcpy(Carrera.cod_carrera, auxcod);
 		
 		cout<<"\n-----------------------------------------------------"<<endl;	
 		cout<<"\nIngrese el Codigo del curso: ";

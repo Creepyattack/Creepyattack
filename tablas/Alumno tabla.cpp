@@ -62,19 +62,21 @@ void alumnos(void){
 
 void altasalumnos(void){
 	
-	bool encontrado = false;
+	bool x = false;
 	FILE *alumno;
 	FILE *carrera;
-	char auxcod[50],aux[10];
-	struct tipo_alumno Alumno;
+	char auxcod[50],aux[50];
 	struct tipo_carrera  Carrera;
+	struct tipo_alumno Alumno;
 	
 	cout<<"\n\r REGISTRO DE ALUMNOS";
 	alumno = fopen("Alumnos.txt", "r+");
+	carrera = fopen("Carreras.txt","r+");
 	
 	if(alumno==NULL){
 		alumno = fopen("Alumnos.txt", "w+");
 		cout<<"\n ARCHIVO CREADO INTENTE DE NUEVO";
+		fclose(carrera);
 		fclose(alumno);
 		getch();
 		return;
@@ -90,6 +92,7 @@ void altasalumnos(void){
 	    	
 	    	if(strcmp(Alumno.carnet, auxcod)==0){
 	    		cout<<"\n YA EXISTE UN ALUMNO CON ESE CARNET";
+	    		fclose(carrera);
 	    		fclose(alumno);
 	    		getch();
 	    		return;
@@ -99,7 +102,8 @@ void altasalumnos(void){
 		
 		strcpy(Alumno.carnet, auxcod);
 		cout<<"\n Ingrese el nombre del alumno: ";
-		cin>>Alumno.carnet;
+		cin>>Alumno.nombre_alumno;
+		
 			cout<<"\n-----------------------------------------------------"<<endl;	
 			cout<<"\nIngrese el Codigo de la Carrera: ";
 	        cin>>aux;
@@ -109,14 +113,14 @@ void altasalumnos(void){
 	        
 	        while(!feof(carrera)){
 	        	
-				if(strcmp(Carrera.cod_carrera, auxcod)== 0){
+				if(strcmp(Carrera.cod_carrera, aux)== 0){
 					cout<<"\n La carrera es : "<<Carrera.carrera<<endl;
 	        		getch();
-	        		encontrado = true;
+	        		x = true;
 				}
 				fread(&Carrera, sizeof(Carrera), 1,carrera);
 			}
-		if(encontrado== false){
+		if(x=false){
 				cout<<"\n ERROR, no existe una carrera con esa clave"<<endl;
 	        	fclose(alumno);
 	        	fclose(carrera);

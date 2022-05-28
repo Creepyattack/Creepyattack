@@ -70,10 +70,10 @@ void altasctdcursos(void){
 	struct tipo_seccion Seccion;
 	struct tipo_catedraticos_cursos Ctd;
 	
-	bool encontra=false;
-	bool encontrado=false;
+	bool z=false;
+	bool c=false;
 	
-	char auxcod[10],aux[50];
+	char auxcod[50],aux[50];
 	
 	cout<<"\n REGISTRO DE CATEDRATICOS POR CURSOS";
 	
@@ -96,6 +96,7 @@ void altasctdcursos(void){
 		cout<<"\n Ingrese el Codigo de la seccion: ";
 		cin>>auxcod;
 		cout<<"\n-----------------------------------------------------"<<endl;
+
 		
 		fread(&Seccion, sizeof(Seccion), 1,secciones);
 			while(!feof(secciones)){
@@ -104,12 +105,13 @@ void altasctdcursos(void){
 					cout<<"\n La seccion es: "<<Seccion.seccion;
 					cout<<"\n El curso es : "<<Seccion.nombre_seccion<<endl;
 					getch();
-	        		encontra = true;
+	        		z = true;
+	        		strcpy(Ctd.seccioncat, auxcod);
 				}
 				fread(&Seccion, sizeof(Seccion), 1,secciones);
 			}
 			
-			if(encontra=false){
+			if(z=false){
 				cout<<"\n ERROR, no existe una seccion con ese codigo"<<endl;
 	        	fclose(ctdcursos);
 				fclose(secciones);
@@ -117,7 +119,6 @@ void altasctdcursos(void){
 	        	getch();
 	        	return;
 			}
-			strcpy(Ctd.carrera_cursos_seccion, aux);
 			cout<<"\n Vuelva a escribir el curso para confirmar: ";
 			cin>>Ctd.nombre_curso_seccion;
 			
@@ -135,11 +136,11 @@ void altasctdcursos(void){
 						cout<<"\n El Nombre del catedratico es: "<<Catedraticos.nombre<<endl;
 						cout<<"\n El titulo del catedratico es: "<<Catedraticos.titulo;
 						getch();
-		        		encontrado = true;
+		        		c = true;
 					}
 					fread(&Catedraticos, sizeof(Catedraticos), 1,catedraticos);
 				}
-					if(encontrado=false){
+					if(c=false){
 					cout<<"\n ERROR, no existe un catedratico con ese codigo"<<endl;
 		        	fclose(ctdcursos);
 					fclose(secciones);
@@ -165,7 +166,7 @@ void bajasctd(void){
 	
 	FILE *ctdcursos;
 	struct tipo_catedraticos_cursos Ctd;
-	char aux[10], op;
+	char aux[50], op;
 	ctdcursos =fopen("Catedraticos_cursos.txt", "r+");
 	
 	if(ctdcursos==NULL){
@@ -180,16 +181,16 @@ void bajasctd(void){
 	
 	fread(&Ctd, sizeof(Ctd), 1,ctdcursos);
 		while(!feof(ctdcursos)){
-			if(strcmp(Ctd.carrera_cursos_seccion, aux)){
+			if(strcmp(Ctd.seccioncat, aux)==0){
 				cout<<"\n-----------------------------------"<<endl;
-	    		cout<<"\n carrera, curso y seccion: "<<Ctd.carrera_cursos_seccion<<endl;
+	    		cout<<"\n carrera, curso y seccion: "<<Ctd.seccioncat<<endl;
 	    		cout<<" Nombre del curso: "<<Ctd.nombre_curso_seccion<<endl;
 	    		cout<<" Codigo del Catedratico: "<<Ctd.codigo_CAT<<endl;
 	    		cout<<" Nombre del catedratico: "<<Ctd.nombre_cat<<endl;
 	    		cout<<" Titulo del catedratico: "<<Ctd.titulo_cat<<endl;
 	    		cout<<"\n-----------------------------------"<<endl;
 	    		
-	    		strcpy(Ctd.carrera_cursos_seccion, "----");
+	    		strcpy(Ctd.seccioncat, "----");
 	    		strcpy(Ctd.nombre_curso_seccion, "----");
 	    		strcpy(Ctd.codigo_CAT, "----");
 	    		strcpy(Ctd.nombre_cat, "----");
@@ -224,7 +225,7 @@ void cambiosctd(void){
 	FILE *ctdcursos;
 	bool rep=true;
 	struct tipo_catedraticos_cursos Ctd;
-	char aux[10];
+	char aux[50];
 	int op;
 	ctdcursos =fopen("Catedraticos_cursos.txt", "r+");
 	
@@ -240,10 +241,10 @@ void cambiosctd(void){
 	
 	fread(&Ctd, sizeof(Ctd), 1,ctdcursos);
 		while(!feof(ctdcursos)){
-			if(strcmp(Ctd.carrera_cursos_seccion, aux)){
+			if(strcmp(Ctd.seccioncat, aux)==0){
 				cout<<"\nLos Datos de la seccion son: ";
 				cout<<"\n-----------------------------------"<<endl;
-	    		cout<<"\n carrera, curso y seccion: "<<Ctd.carrera_cursos_seccion<<endl;
+	    		cout<<"\n carrera, curso y seccion: "<<Ctd.seccioncat<<endl;
 	    		cout<<" Nombre del curso: "<<Ctd.nombre_curso_seccion<<endl;
 	    		cout<<" Codigo del Catedratico: "<<Ctd.codigo_CAT<<endl;
 	    		cout<<" Nombre del catedratico: "<<Ctd.nombre_cat<<endl;

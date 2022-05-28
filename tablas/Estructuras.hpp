@@ -41,7 +41,7 @@ struct tipo_catedraticos{
 
 struct tipo_catedraticos_cursos{
 	
-	char carrera_cursos_seccion[50];
+	char seccioncat[50];
 	char nombre_curso_seccion[50];
 	char codigo_CAT[50];
 	char nombre_cat[50];
