@@ -6,6 +6,8 @@
 
 using namespace std;
 
+void reporteXCatedratico(void);
+
 void catedraticosmenu(void){
 	
 	int x;
@@ -24,7 +26,7 @@ void catedraticosmenu(void){
 	switch(x){
 		
 		case 1:
-			
+			reporteXCatedratico();
 		break;
 		
 		case 2:

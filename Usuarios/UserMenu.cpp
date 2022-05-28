@@ -6,6 +6,7 @@
 
 using namespace std;
 
+void reporteXCatedratico(void);
 void reporteXalumnos(void);
 
 void admin(void){
@@ -32,7 +33,7 @@ void admin(void){
 		break;
 		
 		case 2:
-			
+			reporteXCatedratico();
 		break;
 		
 		case 3:
