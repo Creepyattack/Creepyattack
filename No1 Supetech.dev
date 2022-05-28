@@ -29,7 +29,7 @@ IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
 CompilerSettings=0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;12;0;0;0
-UnitCount=18
+UnitCount=16
 
 [VersionInfo]
 Major=1
@@ -80,47 +80,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit4]
-FileName=Usuarios\administradorcontrasena.cpp
-CompileCpp=1
-Folder=Usuarios
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit5]
-FileName=Usuarios\alumno.cpp
-CompileCpp=1
-Folder=Usuarios
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
 [Unit6]
-FileName=Usuarios\User.cpp
-CompileCpp=1
-Folder=Usuarios
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit7]
-FileName=Usuarios\UserMenu.cpp
-CompileCpp=1
-Folder=Usuarios
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit8]
 FileName=Otros\Main.cpp
 CompileCpp=1
 Folder=Otros
@@ -130,7 +90,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit9]
+[Unit7]
 FileName=tablas\Secciones.cpp
 CompileCpp=1
 Folder=Tablas
@@ -140,7 +100,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit10]
+[Unit8]
 FileName=tablas\Estructuras.hpp
 CompileCpp=1
 Folder=Otros
@@ -150,7 +110,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit11]
+[Unit9]
 FileName=tablas\Catedraticos.cpp
 CompileCpp=1
 Folder=Tablas
@@ -160,7 +120,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit12]
+[Unit10]
 FileName=tablas\Alumno tabla.cpp
 CompileCpp=1
 Folder=Tablas
@@ -170,7 +130,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit13]
+[Unit11]
 FileName=tablas\Catedraticos por cursos.cpp
 CompileCpp=1
 Folder=Tablas
@@ -180,7 +140,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit14]
+[Unit12]
 FileName=Usuarios\Menu tablas.cpp
 CompileCpp=1
 Folder=Usuarios
@@ -190,8 +150,8 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit15]
-FileName=Usuarios\catedraticoscontra.cpp
+[Unit13]
+FileName=Usuarios\Catedraticos Menu.cpp
 CompileCpp=1
 Folder=Usuarios
 Compile=1
@@ -200,10 +160,20 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit16]
-FileName=Usuarios\Catedraticos Menu.cpp
+[Unit15]
+FileName=tablas\Usuarios.cpp
 CompileCpp=1
-Folder=Usuarios
+Folder=Tablas
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit16]
+FileName=tablas\Password.cpp
+CompileCpp=1
+Folder=
 Compile=1
 Link=1
 Priority=1000
@@ -220,8 +190,28 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit18]
-FileName=tablas\alumnos por carrera y ciclo.cpp
+[Unit4]
+FileName=Usuarios\alumno.cpp
+CompileCpp=1
+Folder=Usuarios
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit5]
+FileName=Usuarios\UserMenu.cpp
+CompileCpp=1
+Folder=Usuarios
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit14]
+FileName=tablas\Evaluacion.cpp
 CompileCpp=1
 Folder=Tablas
 Compile=1

@@ -9,6 +9,7 @@ struct tipo_alumno{
 	char nombre_alumno[50];
 	char carnet[50];
 	char alumno_carrera[50];
+	int ciclo_alumno;
 };
 
 struct tipo_carrera{
@@ -47,10 +48,31 @@ struct tipo_catedraticos_cursos{
 	char titulo_cat[50];
 };
 
-struct tipo_alumno_ciclo{
+
+struct tipo_evaluacion1{
 	
-	char carnet_curso[50];
-	char nombre_alumno_curso[50];
-	char carrera_ciclo[50];
-	char ciclo_alumno[50];
+	char carnet1[50];
+	char catedratico1[50];
+	char evaluacion1[50];
+};
+
+struct tipo_evaluacion2{
+	
+	char carnet2[50];
+	char catedratico2[50];
+	char evaluacion2[50];
+};
+
+struct tipo_evaluacion3{
+	
+	char carnet3[50];
+	char catedratico3[50];
+	char evaluacion3[50];
+};
+
+struct usuarios{
+	
+	char usuario[50];
+	char contrasena[50];
+	char tipo[50];
 };

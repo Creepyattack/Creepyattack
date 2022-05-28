@@ -6,8 +6,8 @@
 
 using namespace std;
 
+void Usuaios(void);
 void catedraticos_cursos(void);
-void alumcurciclo(void);
 void secciones(void);
 void carreras(void);
 void cursos(void);
@@ -34,7 +34,7 @@ void Tablas(void){
 	cout<<"\n---------------------------------------------------------------"<<endl;
 	cout<<"- Opcion 6: Ingreso Archivo de catedraticos por curso y seccion-";
 	cout<<"\n---------------------------------------------------------------"<<endl;
-	cout<<"- Opcion 7: Ingreso Archivo de Alumnos por carrera y ciclo     -";
+	cout<<"- Opcion 7: Ingreso Archivo de Usuarios                        -";
 	cout<<"\n---------------------------------------------------------------"<<endl;
 	cout<<"- Opcion 8: Regresar al Menu anterior                          -";
 	cout<<"\n---------------------------------------------------------------"<<endl;
@@ -68,7 +68,7 @@ void Tablas(void){
 		break;
 		
 		case 7:
-			alumcurciclo();
+			Usuaios();
 		break;
 		
 		case 8:

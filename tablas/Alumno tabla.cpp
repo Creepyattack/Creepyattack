@@ -9,6 +9,7 @@ using namespace std;
 
 void altasalumnos(void);
 void bajasalumnos(void);
+void cambiosalumno(void);
 
 void alumnos(void){
 	
@@ -44,7 +45,7 @@ void alumnos(void){
 		break;
 		
 		case 3:
-			
+			cambiosalumno();
 		break;
 		
 		case 5:
@@ -123,9 +124,10 @@ void altasalumnos(void){
 	        	return;
 		}
 	     
-			cout<<"\n Vuelva a escribir el curso para confirmar: ";
+			cout<<"\n Vuelva a escribir la carrera para confirmar: ";
 			cin>>Alumno.alumno_carrera; 
-			
+			cout<<"\n Ingrese el ciclo de la carrera que cursa: ";
+			cin>>Alumno.ciclo_alumno;
 			cout<<"\n Registro Creado";
 			fwrite(&Alumno, sizeof(Alumno), 1,alumno);
 			fclose(alumno);
@@ -162,11 +164,13 @@ void bajasalumnos(void){
 	    		cout<<"\n Carnet del alumno: "<<Alumno.carnet<<endl;
 	    		cout<<" Nombre del alumno: "<<Alumno.nombre_alumno<<endl;
 	    		cout<<" Carrera del alumno: "<<Alumno.alumno_carrera<<endl;
+	    		cout<<" Ciclo en el que cursa: "<<Alumno.ciclo_alumno<<endl;
 	    		cout<<"\n-----------------------------------"<<endl;
 	    		
 	    		strcpy(Alumno.carnet, "----");
 	    		strcpy(Alumno.nombre_alumno, "----");
 	    		strcpy(Alumno.alumno_carrera, "----");
+	    		Alumno.ciclo_alumno=0;
 	    		
 	    		do{
 	    		cout<<"\n\nDesea eliminar el Registro? [S/N]: ";
@@ -224,6 +228,7 @@ void cambiosalumno(void){
 					cout<<"\n Carnet del alumno: "<<Alumno.carnet<<endl;
 		    		cout<<" Nombre del alumno: "<<Alumno.nombre_alumno<<endl;
 		    		cout<<" Carrera del alumno: "<<Alumno.alumno_carrera<<endl;
+		    		cout<<" Ciclo en el que cursa: "<<Alumno.ciclo_alumno<<endl;
 		    		cout<<"\n-----------------------------------"<<endl;
 		    		cout<<"\n\n\n\r";
 			
@@ -238,6 +243,8 @@ void cambiosalumno(void){
 							cout<<"- Cambiar Nombre: Opcion 1.       -";
 							cout<<"\n---------------------------------"<<endl;
 							cout<<"- Cambiar Carrera: Opcion 2.      -";
+							cout<<"\n---------------------------------"<<endl;
+							cout<<"- Cambiar Ciclo: Opcion 3.        -";
 							cout<<"\n---------------------------------"<<endl;
 							cout<<"- Terminar o Cancelar: Opcion 0.  -";
 							cout<<"\n---------------------------------"<<endl;
@@ -258,6 +265,13 @@ void cambiosalumno(void){
 									system("cls");
 									cout<<"\nIngrese la Nueva carrera del Alumno: ";
 									cin>>Alumno.alumno_carrera;
+									system("cls");
+								break;
+								
+								case 3:
+									system("cls");
+									cout<<"\nIngrese el Nuevo ciclo que cursa el Alumno: ";
+									cin>>Alumno.ciclo_alumno;
 									system("cls");
 								break;
 

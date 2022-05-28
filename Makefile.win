@@ -4,15 +4,15 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = tablas/Carreras.o tablas/cursos.o Usuarios/admin.o Usuarios/administradorcontrasena.o Usuarios/alumno.o Usuarios/User.o Usuarios/UserMenu.o Otros/Main.o tablas/Secciones.o tablas/Catedraticos.o "tablas/Alumno\ tabla.o" "tablas/Catedraticos\ por\ cursos.o" "Usuarios/Menu\ tablas.o" Usuarios/catedraticoscontra.o "Usuarios/Catedraticos\ Menu.o" tablas/Evaluacion.o "tablas/alumnos\ por\ carrera\ y\ ciclo.o"
-LINKOBJ  = tablas/Carreras.o tablas/cursos.o Usuarios/admin.o Usuarios/administradorcontrasena.o Usuarios/alumno.o Usuarios/User.o Usuarios/UserMenu.o Otros/Main.o tablas/Secciones.o tablas/Catedraticos.o "tablas/Alumno tabla.o" "tablas/Catedraticos por cursos.o" "Usuarios/Menu tablas.o" Usuarios/catedraticoscontra.o "Usuarios/Catedraticos Menu.o" tablas/Evaluacion.o "tablas/alumnos por carrera y ciclo.o"
+OBJ      = tablas/Carreras.o tablas/cursos.o Usuarios/admin.o Usuarios/alumno.o Usuarios/UserMenu.o Otros/Main.o tablas/Secciones.o tablas/Catedraticos.o "tablas/Alumno\ tabla.o" "tablas/Catedraticos\ por\ cursos.o" "Usuarios/Menu\ tablas.o" "Usuarios/Catedraticos\ Menu.o" tablas/Evaluacion.o tablas/Usuarios.o tablas/Password.o
+LINKOBJ  = tablas/Carreras.o tablas/cursos.o Usuarios/admin.o Usuarios/alumno.o Usuarios/UserMenu.o Otros/Main.o tablas/Secciones.o tablas/Catedraticos.o "tablas/Alumno tabla.o" "tablas/Catedraticos por cursos.o" "Usuarios/Menu tablas.o" "Usuarios/Catedraticos Menu.o" tablas/Evaluacion.o tablas/Usuarios.o tablas/Password.o
 LIBS     = -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib" -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
 CXXINCS  = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
 BIN      = "No1 Supetech.exe"
 CXXFLAGS = $(CXXINCS) 
 CFLAGS   = $(INCS) 
-DEL      = C:\Program Files (x86)\Embarcadero\Dev-Cpp\devcpp.exe INTERNAL_DEL
+DEL      = C:\Program Files (x86)\Embarcadero\Dev-Cpp\DevCpp.exe INTERNAL_DEL
 
 .PHONY: all all-before all-after clean clean-custom
 
@@ -33,14 +33,8 @@ tablas/cursos.o: tablas/cursos.cpp
 Usuarios/admin.o: Usuarios/admin.cpp
 	$(CPP) -c Usuarios/admin.cpp -o Usuarios/admin.o $(CXXFLAGS)
 
-Usuarios/administradorcontrasena.o: Usuarios/administradorcontrasena.cpp
-	$(CPP) -c Usuarios/administradorcontrasena.cpp -o Usuarios/administradorcontrasena.o $(CXXFLAGS)
-
 Usuarios/alumno.o: Usuarios/alumno.cpp
 	$(CPP) -c Usuarios/alumno.cpp -o Usuarios/alumno.o $(CXXFLAGS)
-
-Usuarios/User.o: Usuarios/User.cpp
-	$(CPP) -c Usuarios/User.cpp -o Usuarios/User.o $(CXXFLAGS)
 
 Usuarios/UserMenu.o: Usuarios/UserMenu.cpp
 	$(CPP) -c Usuarios/UserMenu.cpp -o Usuarios/UserMenu.o $(CXXFLAGS)
@@ -63,14 +57,14 @@ tablas/Catedraticos.o: tablas/Catedraticos.cpp
 "Usuarios/Menu\ tablas.o": Usuarios/Menu\ tablas.cpp
 	$(CPP) -c "Usuarios/Menu tablas.cpp" -o "Usuarios/Menu tablas.o" $(CXXFLAGS)
 
-Usuarios/catedraticoscontra.o: Usuarios/catedraticoscontra.cpp
-	$(CPP) -c Usuarios/catedraticoscontra.cpp -o Usuarios/catedraticoscontra.o $(CXXFLAGS)
-
 "Usuarios/Catedraticos\ Menu.o": Usuarios/Catedraticos\ Menu.cpp
 	$(CPP) -c "Usuarios/Catedraticos Menu.cpp" -o "Usuarios/Catedraticos Menu.o" $(CXXFLAGS)
 
 tablas/Evaluacion.o: tablas/Evaluacion.cpp
 	$(CPP) -c tablas/Evaluacion.cpp -o tablas/Evaluacion.o $(CXXFLAGS)
 
-"tablas/alumnos\ por\ carrera\ y\ ciclo.o": tablas/alumnos\ por\ carrera\ y\ ciclo.cpp
-	$(CPP) -c "tablas/alumnos por carrera y ciclo.cpp" -o "tablas/alumnos por carrera y ciclo.o" $(CXXFLAGS)
+tablas/Usuarios.o: tablas/Usuarios.cpp
+	$(CPP) -c tablas/Usuarios.cpp -o tablas/Usuarios.o $(CXXFLAGS)
+
+tablas/Password.o: tablas/Password.cpp
+	$(CPP) -c tablas/Password.cpp -o tablas/Password.o $(CXXFLAGS)
