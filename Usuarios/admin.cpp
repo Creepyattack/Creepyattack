@@ -6,6 +6,7 @@
 
 using namespace std;
 
+void admin(void);
 void Tablas(void);
 void alumno(void);
 
@@ -23,7 +24,7 @@ void usermenu(void){
 	cout<<"\n-----------------------------------------------------"<<endl;
 	cout<<"- Opcion 3: Menu de administracion                   -";
 	cout<<"\n-----------------------------------------------------"<<endl;
-	cout<<"- Opcion 4: Regresar al Menu Principal           -";
+	cout<<"- Opcion 4: Regresar al Menu Principal               -";
 	cout<<"\n-----------------------------------------------------"<<endl;
 	cout<<"\n\n Elija una Opcion: ";
 	cin>>x;
@@ -39,7 +40,7 @@ void usermenu(void){
 		break;
 		
 		case 3:
-		
+			admin();
 		break;
 	
 		case 4:

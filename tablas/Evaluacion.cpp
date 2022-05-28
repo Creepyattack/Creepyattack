@@ -8,6 +8,7 @@
 using namespace std;
 
 void evaluacion(void){
+	
 	system("cls");
 	bool w=false;
 	bool encontrado=false;
@@ -135,11 +136,11 @@ void evaluacion(void){
 				
 				cout<<"\t\n- Estimados Alumnos:";
 				cout<<"\t\n- Con base en su criterio formal y objetivo, le solicitamos su opinion acerca del desempeno de sus docentes,";
-				cout<<" utilizando la escala de Indicadores EX = excelente, MB = muy bueno, B= Bueno, NM= Necesita mejorar.";
+				cout<<"\n -utilizando la escala de Indicadores EX = excelente, MB = muy bueno, B= Bueno, NM= Necesita mejorar.";
 				cout<<"\t\n- Tomando en cuenta lo anterior POR FAVOR ESCRIBIR LOS INDICADORES EN LAS SIGIENTES PREGUNTAS: ";
 				cout<<"\t\n\n- Asistencia y Puntualidad a su clase: ";
 				cin>>Eva1.evaluacion1;
-				cout<<"\t\n- Conocimiento y Dominio de los temas: ";
+				cout<<"\t\n\n- Conocimiento y Dominio de los temas: ";
 				cin>>Eva2.evaluacion2;
 				cout<<"\t\n- Presentacion dosificacion curso al inicio del semestre: ";
 				cin>>Eva3.evaluacion3;

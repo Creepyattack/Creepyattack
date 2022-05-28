@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = tablas/Carreras.o tablas/cursos.o Usuarios/admin.o Usuarios/alumno.o Usuarios/UserMenu.o Otros/Main.o tablas/Secciones.o tablas/Catedraticos.o "tablas/Alumno\ tabla.o" "tablas/Catedraticos\ por\ cursos.o" "Usuarios/Menu\ tablas.o" "Usuarios/Catedraticos\ Menu.o" tablas/Evaluacion.o tablas/Usuarios.o tablas/Password.o
-LINKOBJ  = tablas/Carreras.o tablas/cursos.o Usuarios/admin.o Usuarios/alumno.o Usuarios/UserMenu.o Otros/Main.o tablas/Secciones.o tablas/Catedraticos.o "tablas/Alumno tabla.o" "tablas/Catedraticos por cursos.o" "Usuarios/Menu tablas.o" "Usuarios/Catedraticos Menu.o" tablas/Evaluacion.o tablas/Usuarios.o tablas/Password.o
+OBJ      = tablas/Carreras.o tablas/cursos.o Usuarios/admin.o Usuarios/alumno.o Usuarios/UserMenu.o Otros/Main.o tablas/Secciones.o tablas/Catedraticos.o "tablas/Alumno\ tabla.o" "tablas/Catedraticos\ por\ cursos.o" "Usuarios/Menu\ tablas.o" "Usuarios/Catedraticos\ Menu.o" tablas/Evaluacion.o tablas/Usuarios.o tablas/Password.o "tablas/Reportes\ de\ alumnos.o"
+LINKOBJ  = tablas/Carreras.o tablas/cursos.o Usuarios/admin.o Usuarios/alumno.o Usuarios/UserMenu.o Otros/Main.o tablas/Secciones.o tablas/Catedraticos.o "tablas/Alumno tabla.o" "tablas/Catedraticos por cursos.o" "Usuarios/Menu tablas.o" "Usuarios/Catedraticos Menu.o" tablas/Evaluacion.o tablas/Usuarios.o tablas/Password.o "tablas/Reportes de alumnos.o"
 LIBS     = -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib" -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
 CXXINCS  = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
@@ -68,3 +68,6 @@ tablas/Usuarios.o: tablas/Usuarios.cpp
 
 tablas/Password.o: tablas/Password.cpp
 	$(CPP) -c tablas/Password.cpp -o tablas/Password.o $(CXXFLAGS)
+
+"tablas/Reportes\ de\ alumnos.o": tablas/Reportes\ de\ alumnos.cpp
+	$(CPP) -c "tablas/Reportes de alumnos.cpp" -o "tablas/Reportes de alumnos.o" $(CXXFLAGS)
