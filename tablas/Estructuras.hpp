@@ -49,45 +49,15 @@ struct tipo_catedraticos_cursos{
 };
 
 
-struct tipo_evaluacion1{
+struct tipo_evaluacion{
 	
-	char carnet1[50];
+	char carnetalum[50];
 	char catedratico1[50];
 	char evaluacion1[50];
-};
-
-struct tipo_evaluacion2{
-	
-	char carnet2[50];
-	char catedratico2[50];
 	char evaluacion2[50];
-};
-
-struct tipo_evaluacion3{
-	
-	char carnet3[50];
-	char catedratico3[50];
 	char evaluacion3[50];
-};
-
-struct tipo_evaluacion4{
-	
-	char carnet4[50];
-	char catedratico4[50];
 	char evaluacion4[50];
-};
-
-struct tipo_evaluacion5{
-	
-	char carnet5[50];
-	char catedratico5[50];
 	char evaluacion5[50];
-};
-
-struct tipo_evaluacion6{
-	
-	char carnet6[50];
-	char catedratico6[50];
 	char evaluacion6[50];
 };
 

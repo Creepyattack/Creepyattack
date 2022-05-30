@@ -12,11 +12,6 @@ void reporteXCatedratico(void){
 	bool rep=false;
 	
 	FILE *prueba1;
-	FILE *prueba2;
-	FILE *prueba3;
-	FILE *prueba4;
-	FILE *prueba5;
-	FILE *prueba6;
 	
 	int t=0,y=0,u=0,i=0;
 	int h=0,j=0,k=0,l=0;
@@ -27,28 +22,14 @@ void reporteXCatedratico(void){
 	int res1,res2,res3,res4,res5,res6;
 	
 	char auxnom[50];
-	struct tipo_evaluacion1 Eva1;
-	struct tipo_evaluacion2 Eva2;
-	struct tipo_evaluacion3 Eva3;
-	struct tipo_evaluacion4 Eva4;
-	struct tipo_evaluacion5 Eva5;
-	struct tipo_evaluacion6 Eva6;
+	
+	struct tipo_evaluacion Eva1;
 	
 	prueba1 =fopen("Prueba1.txt","r+");
-	prueba2 =fopen("Prueba2.txt","r+");
-	prueba3 =fopen("Prueba3.txt","r+");
-	prueba4 =fopen("Prueba4.txt","r+");
-	prueba5 =fopen("Prueba5.txt","r+");
-	prueba6 =fopen("Prueba6.txt","r+");
 	
 	if(prueba1==NULL){
 		cout<<"\n NO EXISTE NINGUNA EVALUACION";
 		fclose(prueba1);
-		fclose(prueba2);
-		fclose(prueba3);
-		fclose(prueba4);
-		fclose(prueba5);
-		fclose(prueba6);
 		getch();
 		return;
 	}
@@ -77,135 +58,97 @@ void reporteXCatedratico(void){
 					if(strcmp(Eva1.evaluacion1, "NM")==0){
 						a++;
 					}
-				}
-			fread(&Eva1, sizeof(Eva1), 1,prueba1);
-			}
-	if(rep==false){
-		cout<<"\n NO EVALUACIONES CON EL CATEDRATICO";
-		fclose(prueba1);
-		fclose(prueba2);
-		fclose(prueba3);
-		fclose(prueba4);
-		fclose(prueba5);
-		fclose(prueba6);
-		getch();
-		return;
-	}
-	
-		fread(&Eva2, sizeof(Eva2), 1,prueba2);
-			while(!feof(prueba2)){
-				if(strcmp(Eva2.catedratico2, auxnom)==0){
-					rep=true;
-					if(strcmp(Eva2.evaluacion2, "EX")==0){
+					
+					if(strcmp(Eva1.evaluacion2, "EX")==0){
 						q++;
 					}
 					
-					if(strcmp(Eva2.evaluacion2, "MB")==0){
+					if(strcmp(Eva1.evaluacion2, "MB")==0){
 						w++;
 					}
 					
-					if(strcmp(Eva2.evaluacion2, "B")==0){
+					if(strcmp(Eva1.evaluacion2, "B")==0){
 						e++;
 					}
 					
-					if(strcmp(Eva2.evaluacion2, "NM")==0){
+					if(strcmp(Eva1.evaluacion2, "NM")==0){
 						r++;
 					}
-				}
-			fread(&Eva2, sizeof(Eva2), 1,prueba2);
-			}
-		
-		fread(&Eva3, sizeof(Eva3), 1,prueba3);
-			while(!feof(prueba3)){
-				if(strcmp(Eva3.catedratico3, auxnom)==0){
-					rep=true;
-					if(strcmp(Eva3.evaluacion3, "EX")==0){
+					
+					if(strcmp(Eva1.evaluacion3, "EX")==0){
 						s++;
 					}
 					
-					if(strcmp(Eva3.evaluacion3, "MB")==0){
+					if(strcmp(Eva1.evaluacion3, "MB")==0){
 						d++;
 					}
 					
-					if(strcmp(Eva3.evaluacion3, "B")==0){
+					if(strcmp(Eva1.evaluacion3, "B")==0){
 						f++;
 					}
 					
-					if(strcmp(Eva3.evaluacion3, "NM")==0){
+					if(strcmp(Eva1.evaluacion3, "NM")==0){
 						g++;
 					}
-				}
-			fread(&Eva3, sizeof(Eva3), 1,prueba3);
-			}
-			
-		fread(&Eva4, sizeof(Eva4), 1,prueba4);
-			while(!feof(prueba4)){
-				if(strcmp(Eva4.catedratico4, auxnom)==0){
-					rep=true;
-					if(strcmp(Eva4.evaluacion4, "EX")==0){
+					
+					if(strcmp(Eva1.evaluacion4, "EX")==0){
 						t++;
 					}
 					
-					if(strcmp(Eva4.evaluacion4, "MB")==0){
+					if(strcmp(Eva1.evaluacion4, "MB")==0){
 						y++;
 					}
 					
-					if(strcmp(Eva4.evaluacion4, "B")==0){
+					if(strcmp(Eva1.evaluacion4, "B")==0){
 						u++;
 					}
 					
-					if(strcmp(Eva4.evaluacion4, "NM")==0){
+					if(strcmp(Eva1.evaluacion4, "NM")==0){
 						i++;
 					}
-				}
-			fread(&Eva4, sizeof(Eva4), 1,prueba4);
-			}
-		
-		fread(&Eva5, sizeof(Eva5), 1,prueba5);
-			while(!feof(prueba5)){
-				if(strcmp(Eva5.catedratico5, auxnom)==0){
-					rep=true;
-					if(strcmp(Eva5.evaluacion5, "EX")==0){
+					
+					if(strcmp(Eva1.evaluacion5, "EX")==0){
 						h++;
 					}
 					
-					if(strcmp(Eva5.evaluacion5, "MB")==0){
+					if(strcmp(Eva1.evaluacion5, "MB")==0){
 						j++;
 					}
 					
-					if(strcmp(Eva5.evaluacion5, "B")==0){
+					if(strcmp(Eva1.evaluacion5, "B")==0){
 						k++;
 					}
 					
-					if(strcmp(Eva5.evaluacion5, "NM")==0){
+					if(strcmp(Eva1.evaluacion5, "NM")==0){
 						l++;
 					}
-				}
-			fread(&Eva5, sizeof(Eva5), 1,prueba5);
-			}
-		
-		fread(&Eva6, sizeof(Eva6), 1,prueba6);
-			while(!feof(prueba6)){
-				if(strcmp(Eva6.catedratico6, auxnom)==0){
-					rep=true;
-					if(strcmp(Eva6.evaluacion6, "EX")==0){
+					
+					if(strcmp(Eva1.evaluacion6, "EX")==0){
 						v++;
 					}
 					
-					if(strcmp(Eva6.evaluacion6, "MB")==0){
+					if(strcmp(Eva1.evaluacion6, "MB")==0){
 						b++;
 					}
 					
-					if(strcmp(Eva6.evaluacion6, "B")==0){
+					if(strcmp(Eva1.evaluacion6, "B")==0){
 						n++;
 					}
 					
-					if(strcmp(Eva6.evaluacion6, "NM")==0){
+					if(strcmp(Eva1.evaluacion6, "NM")==0){
 						m++;
 					}
+					
 				}
-			fread(&Eva6, sizeof(Eva6), 1,prueba6);
+				fread(&Eva1, sizeof(Eva1), 1,prueba1);		
 			}
+			
+	if(rep==false){
+		cout<<"\n NO HAY EVALUACIONES CON EL CATEDRATICO";
+		fclose(prueba1);
+		getch();
+		return;
+	}
 		
 		res4=t+y+u+i;
 		res5=h+j+k+l;
@@ -228,8 +171,6 @@ void reporteXCatedratico(void){
 		
 		
 		fclose(prueba1);
-		fclose(prueba2);
-		fclose(prueba3);
 		getch();
 		return;
 }

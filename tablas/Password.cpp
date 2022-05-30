@@ -34,7 +34,7 @@ void Password(void){
 	    		encontra=true;
 	    		if(strcmp(Usuario.contrasena, auxcontra)==0){
 	    			encontrado=true;
-	    			cout<<"\n\t Tipo de usuario: "<<Usuario.tipo;
+	    			cout<<"\n\t Tipo de usuario: "<<Usuario.tipo<<endl;
 	    			
 	    			if(strcmp(Usuario.tipo, "Administrador")==0){
 	    				cout<<"\n\t BIENVENIDO AL SISTEMA";

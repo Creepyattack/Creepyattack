@@ -27,7 +27,7 @@ void alumnos(void){
 	cout<<"\n-----------------------------------------------------"<<endl;
 	cout<<"- Opcion 3: Cambios                                  -";
 	cout<<"\n-----------------------------------------------------"<<endl;
-	cout<<"- Opcion 5: Regresar al Menu Principal                -";
+	cout<<"- Opcion 4: Regresar al Menu Principal                -";
 	cout<<"\n-----------------------------------------------------"<<endl;
 	cout<<"\n\n Elija una Opcion: ";
 	cin>>i;
@@ -48,7 +48,7 @@ void alumnos(void){
 			cambiosalumno();
 		break;
 		
-		case 5:
+		case 4:
 		repetir = false;
 		break;
 		
